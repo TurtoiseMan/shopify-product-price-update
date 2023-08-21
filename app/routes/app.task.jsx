@@ -29,24 +29,7 @@ export const loader = async ({ request }) => {
     return json({ shop: session.shop.replace(".myshopify.com", "") });
 };
 
-// const UPDATE_PRODUCT_MUTATION = `
-//   mutation updateProduct($input: ProductInput!) {
-//       productUpdate(input: $input) {
-//         product {
-//           id
-//           title
-//           variants (first: 1) {
-//             edges {
-//               node {
-//                 id
-//                 price
-//               }
-//             }
-//           }
-//         }
-//       }
-//     }
-//     `;
+
 
 // const UPDATE_PRODUCT_MUTATION = `mutation productVariantUpdate($input: ProductVariantInput!) {
 //     productVariantUpdate(input: $input) {

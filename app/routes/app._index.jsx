@@ -151,24 +151,24 @@ export default function Index() {
 
   // @ts-ignore
   const generateProduct = () => submit({}, { replace: true, method: "POST" });
-  // @ts-ignore
+  // // @ts-ignore
 
-  const [selectedProduct, setSelectedProduct] = useState([]);
-  const [newPrice, setNewPrice] = useState('');
-  // const [selectedProductId, setProductId] = useState('');
-  // const [variants, setVariants] = useState([]);
+  // const [selectedProduct, setSelectedProduct] = useState([]);
+  // const [newPrice, setNewPrice] = useState('');
+  // // const [selectedProductId, setProductId] = useState('');
+  // // const [variants, setVariants] = useState([]);
 
-  const selectProduct = async () => {
-    // console.log("selected");
-    const selected = await shopify.resourcePicker({ type: 'product', action: 'select' });
-    console.log(selected);
-    console.log(selected[0].id)
-    // @ts-ignore
-    setSelectedProduct(selected);
-    // @ts-ignore
-    // setProductId(selected[0].id);
-    // setVariants(selected[0].variants);
-  }
+  // const selectProduct = async () => {
+  //   // console.log("selected");
+  //   const selected = await shopify.resourcePicker({ type: 'product', action: 'select' });
+  //   console.log(selected);
+  //   console.log(selected[0].id)
+  //   // @ts-ignore
+  //   setSelectedProduct(selected);
+  //   // @ts-ignore
+  //   // setProductId(selected[0].id);
+  //   // setVariants(selected[0].variants);
+  // }
 
   // productUpdater(selectedProductId, variants);
   // const updateProduct = () => submit({}, { replace: true, method: "PUT" });

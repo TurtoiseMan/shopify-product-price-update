@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import { json } from "@remix-run/node";
 import {
+    Form,
     useActionData,
     useLoaderData,
     useNavigation,
@@ -60,10 +61,8 @@ export const loader = async ({ request }) => {
 export async function action({ request }) {
     const { admin } = await authenticate.admin(request);
     const id = "gid://shopify/ProductVariant/46521029198099";
-    const price = 32.00;
+    const price = 3434.00;
 
-    console.log("id is" + id);
-    console.log("price is " + price);
 
     const response = await admin.graphql(
         `#graphql
@@ -105,8 +104,6 @@ export default function Task() {
     const [selectedProduct, setSelectedProduct] = useState([]);
     const [newPrice, setNewPrice] = useState('');
 
-    // const [selectedProductId, setProductId] = useState('');
-    // const [variants, setVariants] = useState([]);
 
     const selectProduct = async () => {
         // console.log("selected");
@@ -115,15 +112,14 @@ export default function Task() {
         console.log(selected[0].id)
         // @ts-ignore
         setSelectedProduct(selected);
-        // @ts-ignore
-        // setProductId(selected[0].id);
-        // setVariants(selected[0].variants);
     }
+
     const submit = useSubmit();
     const handlePriceUpdate = () => submit({}, { replace: true, method: "POST" });
+
     return (
         <>
-            <div>Select the Products and update its price Taskkk </div>
+            <div>Select the Products and update its price</div>
             <button variant="primary" onClick={selectProduct}>
                 select a product
             </button>

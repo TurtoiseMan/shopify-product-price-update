@@ -2,7 +2,7 @@
 
 name = "debug"
 client_id = "427d4d91b25c5a722f933e3560e3bd3c"
-application_url = "https://overnight-vote-forget-furnishings.trycloudflare.com"
+application_url = "https://richardson-stadium-sweden-planned.trycloudflare.com"
 embedded = true
 
 [access_scopes]
@@ -11,9 +11,9 @@ scopes = "write_products"
 
 [auth]
 redirect_urls = [
-  "https://overnight-vote-forget-furnishings.trycloudflare.com/auth/callback",
-  "https://overnight-vote-forget-furnishings.trycloudflare.com/auth/shopify/callback",
-  "https://overnight-vote-forget-furnishings.trycloudflare.com/api/auth/callback"
+  "https://richardson-stadium-sweden-planned.trycloudflare.com/auth/callback",
+  "https://richardson-stadium-sweden-planned.trycloudflare.com/auth/shopify/callback",
+  "https://richardson-stadium-sweden-planned.trycloudflare.com/api/auth/callback"
 ]
 
 [webhooks]
